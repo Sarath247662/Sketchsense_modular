@@ -3,17 +3,23 @@
 import os
 import pandas as pd
 from ..utils.file_utils import save_temp_pdf, cleanup_temp
-from .diff_service import (
+from .adjust_location import (
     get_largest_rects_per_page,
-    extract_text_with_pos,
     adjust_new_elements_positions,
-    compare_text_positions,
-    inverse_adjust_bbox,
-    extract_table_bboxes,
-    match_ps_tables,
-    remove_common_table_changes,
-    reassign_change_numbers,
-    annotate_pdf
+    inverse_adjust_bbox
+)
+from .annotate import (
+    annotate_pdf, 
+    reassign_change_numbers
+)
+from .text_compare import (
+    extract_text_with_pos, 
+    compare_text_positions
+)
+from .table_compare import (
+    extract_table_bboxes, 
+    match_ps_tables, 
+    remove_common_table_changes
 )
 
 def process_comparison(uploaded_file1, uploaded_file2, output_dir="output"):

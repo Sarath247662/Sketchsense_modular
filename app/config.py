@@ -16,5 +16,5 @@ class Config:
     JWT_COOKIE_CSRF_PROTECT  = False
 
     CORS_ORIGINS             = ["http://10.245.146.151:5002"]
-    #CORS_ORIGINS             = ["http://localhost:5000","http://127.0.0.1:5000"]
+    # CORS_ORIGINS             = ["http://127.0.0.1:5000"]
     MAX_CONTENT_LENGTH       = 50 * 1024 * 1024
